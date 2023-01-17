@@ -12,7 +12,17 @@ const getById = async (req, res) => {
   return res.status(200).json(product);
 };
 
+const addProduct = async (req, res) => {
+  const { name } = req.body;
+  const sqlResponse = await productsService.addProduct(name);
+  if (!sqlResponse) return res.status(400).json({ message: 'Product not added' });
+  const [{ insertId }] = sqlResponse;
+  // return res.status(201).json({ id: sqlResponse.insertId, name });
+  return res.status(201).json({ id: insertId, name });
+};
+
 module.exports = {
   getAllProducts,
   getById,
+  addProduct,
 };

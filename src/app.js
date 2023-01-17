@@ -2,6 +2,9 @@ const express = require('express');
 const productRouter = require('./routers/product.router');
 
 const app = express();
+
+app.use(express.json());
+
 // Iniciando projeto - Lutti
 app.use('/products', productRouter);
 
