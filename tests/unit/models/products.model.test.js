@@ -3,12 +3,12 @@ const sinon = require('sinon');
 const productsModel = require('../../../src/models/products.model');
 
 const { connection } = require('../../../src/models/connection');
-const { products, productsFromDB } = require('./mocks/product.model.mocks');
+const { products, productsFromDB } = require('../mocks/product.model.mocks');
 
 describe('Testa model de products', function () { 
   it('Retorno de getAll lista de products', async function () {
     // Arrange
-    sinon.stub(connection, 'execute').resolves([products, undefined]);
+    sinon.stub(connection, 'execute').resolves(productsFromDB);
     // Act
     const result = await productsModel.getAllProducts();
     // Assert
