@@ -8,12 +8,12 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2023-01-13T20:26:32.919Z",
-    "modified": "2023-01-18T22:57:11.751Z",
+    "modified": "2023-01-24T01:07:42.935Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "[\n  {\n    \"productId\": 1,\n    \"quantity\": 1\n  },\n  {\n    \"productId\": 2\n  }\n]",
+      "raw": "[\n  {\n    \"productId\": 1,\n    \"quantity\": 0\n  }\n]",
       "form": []
     },
     "tests": []
