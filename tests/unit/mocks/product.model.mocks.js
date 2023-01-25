@@ -34,7 +34,25 @@ const productsFromDB = [
   ]
 ]
 
+const productFromDB = [
+  {
+    id: 1,
+    name: 'Martelo de Thor'
+  },
+  [
+    {},
+    {}
+  ]
+]
+
+const product = {
+  id: 1,
+  name: 'Martelo de Thor'
+}
+
 module.exports = {
   products,
   productsFromDB,
+  product,
+  productFromDB,
 };
